@@ -3,6 +3,10 @@
   padding-top: 30px;
   padding-bottom: 92px;
   margin: 0 60px;
+  background-image: url("./images/portfolio-bg.png");
+  background-size: 50% auto;
+  /*background-repeat: no-repeat;*/
+  background-position: left bottom;
 }
 
 .portfolioContainer {

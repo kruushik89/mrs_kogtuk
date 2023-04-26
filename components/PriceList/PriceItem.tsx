@@ -13,7 +13,6 @@ const PriceItem: React.FC<PriceItemProps> = ({ isPrice, data }) => {
         {isPrice && <div className={styles.priceItemTitle}>Price</div>}
       </div>
       {data && data.list.map((price: any) => {
-        console.log(price)
         return (
           <>
             <div className={styles.data}>

@@ -6,6 +6,7 @@ import MainScreen from '@/components/MainScreen/MainScreen';
 import Description from '@/components/Description/Description';
 import PriceList from '@/components/PriceList/PriceList';
 import Portfolio from '@/components/Portfolio/Portfolio';
+import Contacts from '@/components/Contacts/Contacts';
 
 export default function Home() {
   return (
@@ -26,6 +27,7 @@ export default function Home() {
         <div className={styles.liner}></div>
         <Portfolio />
         <div className={styles.liner}></div>
+        <Contacts />
       </main>
     </>
   )

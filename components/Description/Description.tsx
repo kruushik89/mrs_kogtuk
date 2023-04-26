@@ -2,8 +2,8 @@ import React from 'react';
 
 import DescriptionItem from '@/components/Description/DescriptionItem';
 import { descriptionData } from '@/components/Description/description.data';
-import flowerLeft from './images/flower-left.png';
-import flowerRight from './images/flower-right.png';
+import flowerLeft from '../../public/images/flower-left.png';
+import flowerRight from '../../public/images/flower-right.png';
 
 import styles from './Description.module.css';
 import classNames from 'classnames';
