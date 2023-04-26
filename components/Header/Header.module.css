@@ -1,0 +1,44 @@
+.header {
+  background: rgba(156, 156, 156, 0.1);
+  position: fixed;
+  left: 0;
+  right: 0;
+  z-index: 1;
+}
+
+.headerWrap {
+  position: relative;
+  height: 70px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin: 0 60px;
+}
+
+.navigation {
+  display: flex;
+  column-gap: 45px;
+}
+
+.navigationItem {
+  font-weight: 600;
+  color: #BFBFBF;
+  cursor: pointer;
+  font-family: 'Lato', sans-serif;
+}
+
+.logo {
+  position: absolute;
+  left: 50%;
+  margin-left: -25px;
+}
+
+.socialIcons {
+  display: flex;
+  column-gap: 20px;
+
+}
+
+.socialIcons img {
+  cursor: pointer;
+}

@@ -1,0 +1,44 @@
+.main {
+  position: relative;
+  margin-left: 60px;
+  height: 100vh;
+  background-image: url("./main-screen.png");
+  background-size: 50% auto;
+  background-repeat: no-repeat;
+  background-position: right center;
+}
+
+.bigLogo {
+  position: absolute;
+  transform: translateX(-50%);
+  left: 50%;
+  top: 100px;
+}
+
+.mainWrap {
+
+}
+
+.image {
+  height: 100%;
+}
+
+.description {
+  padding-left: 40px;
+  padding-top: 200px;
+}
+
+.descriptionItem {
+  font-weight: 700;
+  font-size: 28px;
+  line-height: 35px;
+  margin-bottom: 40px;
+
+  color: #9C9C9C;
+}
+
+.advantages {
+  display: flex;
+  column-gap: 34px;
+  margin-top: 110px;
+}

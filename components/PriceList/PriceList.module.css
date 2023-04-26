@@ -1,0 +1,48 @@
+.priceList {
+  padding-top: 30px;
+  background-image: url("./images/portfolio-bg.png");
+  background-size: 50% auto;
+  background-repeat: no-repeat;
+  background-position: left bottom;
+  padding-bottom: 50px;
+}
+
+.priceListContent {
+  display: grid;
+  grid-template-columns: 300px 775px;
+  justify-content: space-between;
+  margin-left: 140px;
+  margin-right: 300px;
+}
+
+.priceItemHeader {
+  display: grid;
+  justify-content: space-between;
+  grid-template-columns: 1fr 100px;
+  margin-bottom: 32px;
+  margin-top: 32px;
+}
+
+.data {
+  display: grid;
+  grid-template-columns: 1fr 100px;
+  margin-bottom: 10px;
+}
+
+.priceItemTitle {
+  color: #FCBC40;
+  font-weight: 700;
+  font-size: 30px;
+}
+
+.dataText {
+  color: #FFFFFF;
+  font-weight: 400;
+  font-size: 16px;
+  text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+}
+
+.subNameList {
+  padding-left: 25px;
+  margin-bottom: 30px;
+}
