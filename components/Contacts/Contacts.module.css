@@ -14,6 +14,18 @@
   justify-content: center;
 }
 
+.telegram:hover {
+  box-shadow: red;
+}
+
+.instagram:hover {
+  color: red;
+}
+
+.facebook:hover {
+  color: red;
+}
+
 .flower {
   position: absolute;
   height: 100%;

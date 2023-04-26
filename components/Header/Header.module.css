@@ -36,9 +36,16 @@
 .socialIcons {
   display: flex;
   column-gap: 20px;
-
 }
 
-.socialIcons img {
-  cursor: pointer;
+.telegram:hover {
+  fill: red;
+}
+
+.instagram:hover {
+  fill: red;
+}
+
+.facebook:hover {
+  fill: red;
 }

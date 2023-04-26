@@ -22,9 +22,9 @@ const Header = () => {
           <Image src={logoImage} alt='Logo' width={50} height={50}/>
         </div>
         <div className={styles.socialIcons}>
-          <Image src={telegramIcon} alt='Logo' width={30} height={30}/>
-          <Image src={facebookIcon} alt='Logo' width={30} height={30}/>
-          <Image src={instagramIcon} alt='Logo' width={30} height={30}/>
+          <a href="https://t.me/l_a_andreevna"><Image src={telegramIcon.src} className={styles.telegram} alt='Logo' width={30} height={30}/></a>
+          <a href="https://instagram.com/mrs.kogtuk?igshid=YmMyMTA2M2Y="><Image src={instagramIcon} className={styles.instagram} alt='Logo' width={30} height={30}/></a>
+          <a href="https://www.facebook.com/profile.php?id=100010697550526"><Image src={facebookIcon} className={styles.facebook} alt='Logo' width={30} height={30}/></a>
         </div>
       </div>
     </div>
