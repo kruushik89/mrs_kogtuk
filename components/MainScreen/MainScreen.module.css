@@ -42,3 +42,22 @@
   column-gap: 34px;
   margin-top: 110px;
 }
+
+@media screen and (max-width: 1600px) {
+  .descriptionItem {
+    font-size: 22px;
+    margin-bottom: 20px;
+  }
+
+  .description {
+    padding-top: 130px;
+  }
+
+  .bigLogo {
+    width: 350px;
+  }
+
+  .bigLogo img {
+    width: 100%;
+  }
+}

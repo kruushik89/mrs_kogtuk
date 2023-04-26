@@ -1,21 +1,24 @@
 .portfolio {
-  height: 100vh;
   box-sizing: border-box;
   padding-top: 30px;
-  margin: 0 220px;
+  padding-bottom: 92px;
+  margin: 0 60px;
 }
 
 .portfolioContainer {
-  position: relative;
-  height: 100%;
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  column-gap: 30px;
 }
 
 .card {
-  width: 300px;
-  height: 250px;
   background: rgba(217, 217, 217, 0.2);
-  border-radius: 8px;
-  position: absolute;
+  border-radius: 20px;
+  padding-top: 8px;
+}
+
+.card img {
+  width: 100%;
 }
 
 .cardTitle {
@@ -26,34 +29,3 @@
 
   color: #D9D9D9;
 }
-
-.portfolio1 {
-  left: 0;
-  top: 0;
-}
-
-.portfolio2 {
-  right: 0;
-  top: 0;
-}
-
-.portfolio3 {
-  left: 50%;
-  top: 50%;
-  margin-left: -150px;
-  margin-top: -125px;
-
-}
-
-.portfolio4 {
-  left: 0;
-  bottom: 0;
-  margin-top: -125px;
-}
-
-/*.portfolio5 {*/
-/*  right: 0;*/
-/*  bottom: 0;*/
-/*}*/
-
-

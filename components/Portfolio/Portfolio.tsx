@@ -14,14 +14,14 @@ import styles from './Portfolio.module.css';
 const Portfolio = () => {
   return (
     <div className={styles.portfolio}>
-      <Title tag='h1'>Portfolio</Title>
+      <Title tag="h1">Portfolio</Title>
 
       <div className={styles.portfolioContainer}>
-        <PortfolioCard title='Класичний манікюр' imageSrc={portfolioCardImage1.src} id={1} />
-        <PortfolioCard title='Кольорова база' imageSrc={portfolioCardImage2.src} id={2} />
-        <PortfolioCard title='Дизайн' imageSrc={portfolioCardImage3.src} id={3} />
-        <PortfolioCard title='Нарощування нігтів' imageSrc={portfolioCardImage4.src} id={4} />
-        <PortfolioCard title='Укріплення гель' imageSrc={portfolioCardImage5.src} id={5} />
+        <PortfolioCard title="Класичний манікюр" imageSrc={portfolioCardImage1.src} id={1}/>
+        <PortfolioCard title="Кольорова база" imageSrc={portfolioCardImage2.src} id={2}/>
+        <PortfolioCard title="Дизайн" imageSrc={portfolioCardImage3.src} id={3}/>
+        <PortfolioCard title="Нарощування нігтів" imageSrc={portfolioCardImage4.src} id={4}/>
+        <PortfolioCard title="Укріплення гель" imageSrc={portfolioCardImage5.src} id={5}/>
       </div>
     </div>
   );
