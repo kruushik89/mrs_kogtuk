@@ -33,7 +33,7 @@ export default function Home() {
         <Header scrollTop={scrollTop}/>
         <MainScreen scrollTop={scrollTop}/>
         <div className={styles.liner}></div>
-        <Description/>
+        <Description/>`
         <div className={styles.liner}></div>
         <PriceList/>
         <div className={styles.liner}></div>

@@ -60,3 +60,30 @@
 .flowerRight {
   right: 0;
 }
+
+@media screen and (max-width: 1600px) {
+  .description {
+    height: auto;
+    padding: 20px 0;
+  }
+
+  .descriptionWrap {
+    margin: 0 10px;
+    grid-template-columns: 1fr;
+    row-gap: 50px;
+    z-index: 1;
+  }
+
+  .icon {
+    margin-bottom: 10px;
+  }
+
+  .title {
+    margin-bottom: 10px;
+  }
+
+  .flower {
+    height: 60%;
+    bottom: -20px;
+  }
+}

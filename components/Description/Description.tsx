@@ -7,13 +7,15 @@ import flowerRight from '../../public/images/flower-right.png';
 
 import styles from './Description.module.css';
 import classNames from 'classnames';
+import useMediaQuery from '@/components/hooks/useMediaQuery';
 
 const Description = () => {
+  const isMobile = useMediaQuery('(max-width: 500px)');
   return (
     <div className={styles.description}>
       <img className={classNames(`${styles.flower}`, {
         [styles.flowerLeft]: true
-      })} src={flowerLeft.src} alt="Flower"/>
+      })} src={flowerLeft.src} alt="Flower" />
       <div className={styles.descriptionWrap}>
         {descriptionData.map((item) => {
           return (
@@ -22,11 +24,13 @@ const Description = () => {
         })}
 
       </div>
-      <img className={
-        classNames(`${styles.flower}`, {
-          [styles.flowerRight]: true
-        })
-      } src={flowerRight.src} alt="Flower"/>
+      {!isMobile && (
+        <img className={
+          classNames(`${styles.flower}`, {
+            [styles.flowerRight]: true
+          })
+        } src={flowerRight.src} alt="Flower"/>
+      )}
     </div>
   );
 };

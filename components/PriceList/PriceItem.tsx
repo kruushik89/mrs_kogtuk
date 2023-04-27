@@ -5,7 +5,6 @@ import styles from './PriceList.module.css';
 import { isNumber } from 'util';
 
 const PriceItem: React.FC<PriceItemProps> = ({ isPrice, data }) => {
-
   return (
     <div className={styles.priceItem}>
       <div className={styles.priceItemHeader}>
@@ -14,7 +13,7 @@ const PriceItem: React.FC<PriceItemProps> = ({ isPrice, data }) => {
       </div>
       {data && data.list.map((price: any) => {
         return (
-          <>
+          <React.Fragment key={price.name}>
             <div className={styles.data}>
               <div className={styles.dataText}>{price.name}</div>
               <div className={styles.dataText}>{Number(price.price) ? `${price.price} ₴` : price.price}</div>
@@ -22,14 +21,14 @@ const PriceItem: React.FC<PriceItemProps> = ({ isPrice, data }) => {
             {!!price.subName.length && (
               <ul className={styles.subNameList}>
                 {price.subName.map((item: any) => (
-                  <li className={styles.data}>
+                  <li className={styles.data} key={item.name}>
                     <div className={styles.dataText}>{item.name}</div>
                     <div className={styles.dataText}>{Number(item.price) ? `${item.price} ₴` : item.price}</div>
                   </li>
                 ))}
               </ul>
             )}
-          </>
+          </React.Fragment>
         )
       })}
     </div>

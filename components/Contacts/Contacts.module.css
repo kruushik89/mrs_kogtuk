@@ -27,3 +27,21 @@
 .flowerRight {
   right: 0;
 }
+
+@media screen and (max-width: 500px) {
+  .contactsWrap {
+    position: relative;
+    z-index: 1;
+  }
+
+  .contactsWrap {
+    column-gap: 30px;
+  }
+
+  .flower {
+    position: absolute;
+    height: 70%;
+    top: initial;
+    bottom: 0;
+  }
+}

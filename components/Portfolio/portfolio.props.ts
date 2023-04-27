@@ -1,5 +1,6 @@
 export interface PortfolioCardProps {
+  type: string;
   imageSrc: string;
   title: string;
-  id: 1 | 2 | 3 | 4 | 5;
+  openModal?: (type: string) => void;
 }

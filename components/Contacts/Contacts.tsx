@@ -11,10 +11,12 @@ import flowerLeft from '@/public/images/flower-left.png';
 import flowerRight from '@/public/images/flower-right.png';
 
 import '@/styles/Home.module.css';
+import useMediaQuery from '@/components/hooks/useMediaQuery';
 
 const Contacts = () => {
-  let width = 100;
-  let height = 100;
+  const isMobile = useMediaQuery('(max-width: 500px)');
+  let width = isMobile ? 65 : 100;
+  let height = isMobile ? 65 : 100;
 
   return (
     <div className={styles.contacts}>

@@ -3,7 +3,7 @@
   position: fixed;
   left: 0;
   right: 0;
-  z-index: 1;
+  z-index: 1000;
 }
 
 .bgBlack {
@@ -48,6 +48,35 @@
   cursor: pointer;
 }
 
-.xxx:hover path {
-  fill: red;
+.mobileNavigation {
+  display: flex;
+  column-gap: 10px;
+}
+
+.mobileNavigationItem {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.mobileNavigationText {
+  font-weight: 600;
+  font-size: 10px;
+  line-height: 14px;
+  margin-top: 5px;
+  color: #BFBFBF;
+}
+
+@media screen and (max-width: 1600px) {
+  .header {
+    background-color: black;
+  }
+
+  .headerWrap {
+    margin: 0 10px;
+  }
+
+  .logo {
+    position: initial;
+  }
 }

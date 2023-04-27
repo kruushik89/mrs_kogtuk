@@ -1,7 +1,11 @@
-import React from 'react';
+import React, { useState } from 'react';
+import ImageGallery from 'react-image-gallery';
+import 'react-image-gallery/styles/css/image-gallery.css';
 
 import Title from '@/components/UI/Title/Title';
 import PortfolioCard from '@/components/Portfolio/PortfolioCard';
+import Modal from '@/components/Modal/Modal';
+import { imagesData } from '@/components/Portfolio/portfolio.data';
 
 import portfolioCardImage1 from './images/portfolio_1.png';
 import portfolioCardImage2 from './images/portfolio_2.png';
@@ -12,17 +16,37 @@ import portfolioCardImage5 from './images/portfolio_5.png';
 import styles from './Portfolio.module.css';
 
 const Portfolio = () => {
+  const [showModal, setShowModal] = useState(false);
+  const [type, setType] = useState('classic');
+  const openModal = (type: string) => {
+    setShowModal(true);
+    setType(type);
+  }
+
+  const closeModal = () => setShowModal(false);
+  const data = imagesData();
+
   return (
     <div className={styles.portfolio}>
       <Title tag="h1">Portfolio</Title>
 
       <div className={styles.portfolioContainer}>
-        <PortfolioCard title="Класичний манікюр" imageSrc={portfolioCardImage1.src} id={1}/>
-        <PortfolioCard title="Кольорова база" imageSrc={portfolioCardImage2.src} id={2}/>
-        <PortfolioCard title="Дизайн" imageSrc={portfolioCardImage3.src} id={3}/>
-        <PortfolioCard title="Нарощування нігтів" imageSrc={portfolioCardImage4.src} id={4}/>
-        <PortfolioCard title="Укріплення гель" imageSrc={portfolioCardImage5.src} id={5}/>
+        <PortfolioCard openModal={openModal} title="Класичний манікюр" imageSrc={portfolioCardImage1.src} type='classic' />
+        <PortfolioCard openModal={openModal} title="Кольорова база" imageSrc={portfolioCardImage2.src} type='classic'/>
+        <PortfolioCard openModal={openModal} title="Дизайн" imageSrc={portfolioCardImage3.src} type='design'/>
+        <PortfolioCard openModal={openModal} title="Нарощування нігтів" imageSrc={portfolioCardImage4.src} type='strengtheningGel'/>
+        <PortfolioCard openModal={openModal} title="Укріплення гель" imageSrc={portfolioCardImage5.src} type='gel'/>
       </div>
+
+      <Modal show={showModal} closeModal={closeModal}>
+        <ImageGallery
+          // @ts-ignore
+          items={data[type]}
+          showPlayButton={false}
+          showFullscreenButton={false}
+          showThumbnails={false}
+        />
+      </Modal>
     </div>
   );
 };

@@ -46,3 +46,20 @@
   padding-left: 25px;
   margin-bottom: 30px;
 }
+
+@media screen and (max-width: 500px) {
+  .priceListContent {
+    margin-left: 10px;
+    margin-right: 10px;
+    grid-template-columns: 1fr;
+  }
+
+  .ownerImage {
+    display: flex;
+    justify-content: center;
+  }
+
+  .dataText {
+    font-size: 14px;
+  }
+}
