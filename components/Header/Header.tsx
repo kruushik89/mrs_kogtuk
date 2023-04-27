@@ -1,17 +1,18 @@
-import React, { useEffect, useState } from 'react';
+import React from 'react';
 import Image from 'next/image'
-
-import styles from './Header.module.css';
+import classNames from 'classnames';
 
 import { HeaderProps } from '@/components/Header/header.props';
-import classNames from 'classnames';
+import useMediaQuery from '@/components/hooks/useMediaQuery';
+import NavLink from '@/components/UI/NavLink/NavLink';
 
 import logoImage from './logo.png';
 import FacebookIcon from '@/public/svg/Facebook';
 import InstagramIcon from '@/public/svg/Instagram';
 import TelegramIcon from '@/public/svg/Telegram';
-import { portfolioIcon, phoneIcon, priceIcon } from './icons';
-import useMediaQuery from '@/components/hooks/useMediaQuery';
+import { phoneIcon, portfolioIcon, priceIcon } from './icons';
+
+import styles from './Header.module.css';
 
 const Header: React.FC<HeaderProps> = ({ scrollTop }) => {
   const isMobile = useMediaQuery('(max-width: 500px)');
@@ -21,33 +22,41 @@ const Header: React.FC<HeaderProps> = ({ scrollTop }) => {
       [styles.bgBlack]: scrollTop >= 100
     })}>
       <div className={styles.headerWrap}>
-        {(!isMobile) && (
+        {( !isMobile ) && (
           <nav className={styles.navigation}>
-            <div className={styles.navigationItem}>Прайс-лист</div>
-            <div className={styles.navigationItem}>Послуги</div>
-            <div className={styles.navigationItem}>Галерея</div>
-            <div className={styles.navigationItem}>Контакти</div>
+            <NavLink path="services">Послуги</NavLink>
+            <NavLink path="price">Прайс-лист</NavLink>
+            <NavLink path="gallery">Галерея</NavLink>
+            <NavLink path="contacts">Контакти</NavLink>
           </nav>
         )}
         {isMobile && (
           <nav className={styles.mobileNavigation}>
-            <div className={styles.mobileNavigationItem}>
-              <Image src={priceIcon} alt='Price icon' width={35} height={35} />
-              <p className={styles.mobileNavigationText}>Прайс-лист</p>
-            </div>
-            <div className={styles.mobileNavigationItem}>
-              <Image src={portfolioIcon} alt='Price icon' width={35} height={35} />
-              <p className={styles.mobileNavigationText}>Портфоліо</p>
-            </div>
-            <div className={styles.mobileNavigationItem}>
-              <Image src={phoneIcon} alt='Price icon' width={35} height={35} />
-              <p className={styles.mobileNavigationText}>Контакти</p>
-            </div>
+            <NavLink path="price">
+              <div className={styles.mobileNavigationItem}>
+                <Image src={priceIcon} alt="Price icon" width={35} height={35}/>
+                <p className={styles.mobileNavigationText}>Прайс-лист</p>
+              </div>
+            </NavLink>
+            <NavLink path="gallery">
+              <div className={styles.mobileNavigationItem}>
+                <Image src={portfolioIcon} alt="Price icon" width={35} height={35}/>
+                <p className={styles.mobileNavigationText}>Портфоліо</p>
+              </div>
+            </NavLink>
+            <NavLink path="contacts">
+              <div className={styles.mobileNavigationItem}>
+                <Image src={phoneIcon} alt="Price icon" width={35} height={35}/>
+                <p className={styles.mobileNavigationText}>Контакти</p>
+              </div>
+            </NavLink>
           </nav>
         )}
-        {(scrollTop >= 100 || isMobile ) && (
+        {( scrollTop >= 100 || isMobile ) && (
           <div className={styles.logo}>
-            <Image src={logoImage} alt="Logo" width={50} height={50}/>
+            <NavLink path="home">
+              <Image src={logoImage} alt="Logo" width={50} height={50}/>
+            </NavLink>
           </div>
         )}
         {!isMobile && (

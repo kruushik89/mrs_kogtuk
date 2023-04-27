@@ -19,7 +19,7 @@ const Contacts = () => {
   let height = isMobile ? 65 : 100;
 
   return (
-    <div className={styles.contacts}>
+    <div className={styles.contacts} id="contacts">
       <img className={classNames(`${styles.flower}`, {
         [styles.flowerLeft]: true
       })} src={flowerLeft.src} alt="Flower"/>

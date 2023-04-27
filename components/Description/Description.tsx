@@ -1,18 +1,19 @@
 import React from 'react';
+import classNames from 'classnames';
 
 import DescriptionItem from '@/components/Description/DescriptionItem';
 import { descriptionData } from '@/components/Description/description.data';
-import flowerLeft from '../../public/images/flower-left.png';
-import flowerRight from '../../public/images/flower-right.png';
+import flowerLeft from '@/public/images/flower-left.png';
+import flowerRight from '@/public/images/flower-right.png';
+import useMediaQuery from '@/components/hooks/useMediaQuery';
+import { DescriptionsProps } from '@/components/Description/description.props';
 
 import styles from './Description.module.css';
-import classNames from 'classnames';
-import useMediaQuery from '@/components/hooks/useMediaQuery';
 
-const Description = () => {
+const Description: React.FC<DescriptionsProps> = () => {
   const isMobile = useMediaQuery('(max-width: 500px)');
   return (
-    <div className={styles.description}>
+    <div className={styles.description} id='services'>
       <img className={classNames(`${styles.flower}`, {
         [styles.flowerLeft]: true
       })} src={flowerLeft.src} alt="Flower" />

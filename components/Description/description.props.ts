@@ -3,3 +3,7 @@ export interface DescriptionItemProps {
   text: string;
   imageSrc: any;
 }
+
+export interface DescriptionsProps {
+
+}

@@ -13,7 +13,7 @@ const MainScreen: React.FC<MainProps> = ({ scrollTop }): JSX.Element => {
   const isMobile = useMediaQuery('(max-width: 500px)');
 
   return (
-    <div className={styles.main}>
+    <div className={styles.main} id="home">
       {(!isMobile && scrollTop < 100) && (
         <div className={styles.bigLogo}>
           <img src={bigLogoImage.src} alt="Big logo"/>
