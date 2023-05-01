@@ -24,7 +24,6 @@ const Header: React.FC<HeaderProps> = ({ scrollTop }) => {
       <div className={styles.headerWrap}>
         {( !isMobile ) && (
           <nav className={styles.navigation}>
-            <NavLink path="services">Послуги</NavLink>
             <NavLink path="price">Прайс-лист</NavLink>
             <NavLink path="gallery">Галерея</NavLink>
             <NavLink path="contacts">Контакти</NavLink>

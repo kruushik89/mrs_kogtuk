@@ -33,11 +33,11 @@ const Portfolio = () => {
       <div className={styles.portfolioContainer}>
         <PortfolioCard openModal={openModal} title="Класичний манікюр" imageSrc={portfolioCardImage1.src}
                        type="classic"/>
-        <PortfolioCard openModal={openModal} title="Кольорова база" imageSrc={portfolioCardImage2.src} type="classic"/>
-        <PortfolioCard openModal={openModal} title="Дизайн" imageSrc={portfolioCardImage3.src} type="design"/>
+        <PortfolioCard openModal={openModal} title="Кольорова база" imageSrc={portfolioCardImage2.src} type="gel"/>
         <PortfolioCard openModal={openModal} title="Нарощування нігтів" imageSrc={portfolioCardImage4.src}
                        type="strengtheningGel"/>
-        <PortfolioCard openModal={openModal} title="Укріплення гель" imageSrc={portfolioCardImage5.src} type="gel"/>
+        <PortfolioCard openModal={openModal} title="Укріплення гель" imageSrc={portfolioCardImage5.src} type="buildUp"/>
+        <PortfolioCard openModal={openModal} title="Дизайн" imageSrc={portfolioCardImage3.src} type="design"/>
       </div>
 
       <Modal show={showModal} closeModal={closeModal}>

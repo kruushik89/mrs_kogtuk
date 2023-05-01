@@ -25,9 +25,9 @@ const Contacts = () => {
       })} src={flowerLeft.src} alt="Flower"/>
       <Title tag="h3">Слідкуйте за мною в соціальних мережах</Title>
       <div className={styles.contactsWrap}>
-        <a href="#"><Image src={telegramIcon} alt="Telegram icon" width={width} height={height}/></a>
-        <a href="#"><Image src={instagramIcon} alt="Instagram icon" width={width} height={height}/></a>
-        <a href="#"><Image src={facebookIcon} alt="Facebook icon" width={width} height={height}/></a>
+        <a href="https://t.me/l_a_andreevna"><Image src={telegramIcon} alt="Telegram icon" width={width} height={height}/></a>
+        <a href="https://instagram.com/mrs.kogtuk?igshid=YmMyMTA2M2Y="><Image src={instagramIcon} alt="Instagram icon" width={width} height={height}/></a>
+        <a href="https://www.facebook.com/profile.php?id=100010697550526"><Image src={facebookIcon} alt="Facebook icon" width={width} height={height}/></a>
       </div>
       <img className={
         classNames(`${styles.flower}`, {

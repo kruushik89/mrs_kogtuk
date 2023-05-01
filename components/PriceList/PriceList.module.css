@@ -47,16 +47,28 @@
   margin-bottom: 30px;
 }
 
-@media screen and (max-width: 500px) {
+@media screen and (max-width: 820px) {
   .priceListContent {
-    margin-left: 10px;
-    margin-right: 10px;
+    margin-left: 50px;
+    margin-right: 50px;
     grid-template-columns: 1fr;
+  }
+
+  .priceList {
+    background-size: 100% auto;
   }
 
   .ownerImage {
     display: flex;
     justify-content: center;
+  }
+
+}
+
+@media screen and (max-width: 500px) {
+  .priceListContent {
+    margin-left: 10px;
+    margin-right: 10px;
   }
 
   .dataText {

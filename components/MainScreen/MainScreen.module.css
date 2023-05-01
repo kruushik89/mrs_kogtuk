@@ -68,6 +68,7 @@
   .main {
     background-size: 70% auto;
   }
+
   .descriptionItem {
     font-size: 22px;
     margin-bottom: 20px;
@@ -86,12 +87,51 @@
   }
 }
 
+@media screen and (max-width: 1024px) {
+  .bigLogo {
+    width: 250px;
+    left: 55%;
+  }
+
+  .advantages {
+    margin-top: 50px;
+  }
+}
+
+@media screen and (max-width: 820px) {
+  .bigLogo {
+    width: 350px;
+  }
+
+  .description {
+    padding-top: 450px;
+  }
+
+  .main {
+    margin: 0;
+    background-size: cover;
+  }
+
+  .descriptionItem {
+    font-size: 28px;
+  }
+
+  .advantages {
+    margin-top: 100px;
+    justify-content: center;
+  }
+
+}
+
 @media screen and (max-width: 500px) {
   .main {
-    margin: 0 10px;
     background-image: url("./images/background-mobile.png");
-    background-size: 100% auto;
     background-position: center bottom;
+    background-size: 100%;
+  }
+
+  .description {
+    padding-top: 130px;
   }
 
   .descriptionItem {

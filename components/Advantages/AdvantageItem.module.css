@@ -1,7 +1,10 @@
 .advantages {
   position: relative;
   width: 220px;
-  height: 300px;
+}
+
+.advantages img {
+  width: 100%;
 }
 
 .label {
@@ -28,5 +31,17 @@
   left: 0;
   top: 50px;
   border-radius: 0 10px 10px 0;
+}
+
+@media screen and (max-width: 1024px) {
+  .advantages {
+    width: 180px;
+  }
+}
+
+@media screen and (max-width: 820px) {
+  .advantages {
+    width: 200px;
+  }
 }
 

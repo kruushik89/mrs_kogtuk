@@ -41,7 +41,6 @@
 .socialIcons {
   display: flex;
   column-gap: 20px;
-
 }
 
 .socialIcons img {
@@ -67,7 +66,19 @@
   color: #BFBFBF;
 }
 
-@media screen and (max-width: 1600px) {
+@media screen and (max-width: 1024px) {
+  .navigation {
+    column-gap: 30px;
+  }
+}
+
+@media screen and (max-width: 1024px) {
+  .logo {
+    left: 70%;
+  }
+}
+
+@media screen and (max-width: 500px) {
   .header {
     background-color: black;
   }
